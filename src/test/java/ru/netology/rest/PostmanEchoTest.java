@@ -7,14 +7,14 @@ import static org.hamcrest.Matchers.equalTo;
 class PostmanEchoTest {
 
     @Test
-    void shouldReturnSendData() {
+    void shouldReturnSendInformation() {
         given()
                 .baseUri("https://postman-echo.com")
-                .body("Hello")
+                .body("Привет")
                 .when()
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("body", equalTo("Hello"));
+                .body("body", equalTo("Привет"));
     }
 }
